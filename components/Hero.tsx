@@ -1,83 +1,99 @@
+const stats = [
+  {
+    value: "4",
+    label: "Featured Projects",
+  },
+  {
+    value: "2",
+    label: "Competitions",
+  },
+  {
+    value: "20+",
+    label: "CAD Models",
+  },
+  {
+    value: "10+",
+    label: "Engineering Reports",
+  },
+];
+
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
-     <div className="max-w-5xl text-center pt-24">
-
-        <p className="uppercase tracking-[0.35em] text-blue-400 text-sm mb-4">
+    <section className="flex min-h-screen items-center justify-center px-6">
+      <div className="w-full max-w-6xl pt-28 text-center">
+        <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[color:var(--accent)]">
           University of Puerto Rico – Mayagüez
         </p>
 
-        <h1 className="text-7xl md:text-8xl font-extrabold mb-4">
+        <h1 className="mb-4 text-5xl font-extrabold tracking-tight text-[color:var(--foreground)] sm:text-6xl md:text-7xl lg:text-8xl">
           David Candelario
         </h1>
 
-        <h2 className="text-2xl text-white font-semibold mb-2">
+        <h2 className="mb-2 text-xl font-semibold text-[color:var(--foreground)] sm:text-2xl">
           Mechanical Engineer
         </h2>
 
-        <p className="text-xl text-gray-300 mb-8">
+        <p className="mb-8 text-lg text-[color:var(--muted)] sm:text-xl">
           Design • Simulation • Manufacturing • Embedded Systems
         </p>
 
-        <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
-          Passionate about transforming engineering concepts into reliable,
-          functional systems through simulation, embedded programming,
-          and hands-on fabrication.
+        <p className="mx-auto max-w-3xl text-base leading-relaxed text-[color:var(--muted)] sm:text-lg">
+          I develop practical engineering solutions from initial analysis
+          through fabrication, system integration, and testing.
         </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4">
-
+        <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
           <a
             href="#experience"
-            className="bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-xl font-semibold"
+            className="rounded-xl bg-[color:var(--accent)] px-8 py-4 font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[color:var(--accent-hover)]"
           >
             Explore My Work
           </a>
 
           <a
             href="/resume.pdf"
-            className="border border-gray-600 hover:border-white transition px-8 py-4 rounded-xl"
+            className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] px-8 py-4 font-medium text-[color:var(--foreground)] transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--accent)] hover:bg-[color:var(--surface-hover)]"
           >
             Download Resume
           </a>
-
         </div>
 
-        {/* Statistics */}
+        <div className="mt-20 grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4 md:gap-10">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <h3 className="text-4xl font-bold text-[color:var(--accent)]">
+                {stat.value}
+              </h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20">
-
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">4+</h3>
-            <p className="text-gray-400 mt-2">Engineering Projects</p>
-          </div>
-
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">2</h3>
-            <p className="text-gray-400 mt-2">Competitions</p>
-          </div>
-
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">20+</h3>
-            <p className="text-gray-400 mt-2">CAD Models</p>
-          </div>
-
-          <div>
-            <h3 className="text-4xl font-bold text-blue-400">10+</h3>
-            <p className="text-gray-400 mt-2">Engineering Reports</p>
-          </div>
-<div className="mt-24 flex justify-center animate-bounce">
-
-    <a
-        href="#experience"
-        className="text-gray-500 hover:text-blue-400 transition text-6xl"
-    >
-        ⌄
-    </a>
-
-</div>
+              <p className="mt-2 text-[color:var(--muted)]">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
 
+        <div className="mt-20 flex justify-center pb-8">
+          <a
+            href="#experience"
+            aria-label="Scroll to engineering experience"
+            className="animate-bounce rounded-full p-3 text-[color:var(--muted)] transition hover:text-[color:var(--accent)]"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className="h-9 w-9"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );

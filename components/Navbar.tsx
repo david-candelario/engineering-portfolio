@@ -1,47 +1,59 @@
+import ThemeToggle from "@/components/ThemeToggle";
+
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full backdrop-blur-md bg-[#0B1120]/70 border-b border-gray-800 z-50">
-      <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-
-        <div className="flex items-center gap-3">
-
-          <div className="w-10 h-10 border border-blue-500 rounded-lg flex items-center justify-center font-bold text-blue-400">
+    <nav className="theme-nav fixed left-0 top-0 z-50 w-full border-b backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
+        <a href="#" className="flex items-center gap-3">
+          <div className="theme-accent flex h-10 w-10 items-center justify-center rounded-lg border border-current font-bold">
             DC
           </div>
 
-          <span className="font-semibold tracking-wide">
+          <span className="font-semibold tracking-wide text-[color:var(--foreground)]">
             David Candelario
           </span>
+        </a>
 
+        <div className="flex items-center gap-3">
+          <div className="theme-muted hidden items-center gap-8 md:flex">
+            <a
+              href="#about"
+              className="transition hover:text-[color:var(--accent)]"
+            >
+              About
+            </a>
+
+            <a
+              href="#experience"
+              className="transition hover:text-[color:var(--accent)]"
+            >
+              Experience
+            </a>
+
+            <a
+              href="#skills"
+              className="transition hover:text-[color:var(--accent)]"
+            >
+              Skills
+            </a>
+
+            <a
+              href="#contact"
+              className="transition hover:text-[color:var(--accent)]"
+            >
+              Contact
+            </a>
+          </div>
+
+          <a
+            href="/resume.pdf"
+            className="hidden rounded-lg border border-[color:var(--accent)] px-4 py-2 text-[color:var(--foreground)] transition hover:bg-[color:var(--accent)] hover:text-white sm:inline-flex"
+          >
+            Resume
+          </a>
+
+          <ThemeToggle />
         </div>
-
-        <div className="hidden md:flex items-center gap-10 text-gray-300">
-
-  <a href="#about" className="hover:text-blue-400 transition">
-    About
-  </a>
-
-  <a href="#experience" className="hover:text-blue-400 transition">
-    Experience
-  </a>
-
-  <a href="#skills" className="hover:text-blue-400 transition">
-    Skills
-  </a>
-
-  <a href="#contact" className="hover:text-blue-400 transition">
-    Contact
-  </a>
-
-  <a
-    href="/resume.pdf"
-    className="border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 transition"
-  >
-    Resume
-  </a>
-
-</div>
-
       </div>
     </nav>
   );
