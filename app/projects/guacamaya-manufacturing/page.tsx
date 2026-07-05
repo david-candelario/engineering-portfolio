@@ -622,7 +622,7 @@ export default function GuacamayaManufacturingPage() {
                 <div className="flex justify-center bg-black">
                   <video
                     controls
-                    preload="metadata"
+                    preload="auto"
                     playsInline
                     className="aspect-video w-full bg-black object-contain"
                   >
