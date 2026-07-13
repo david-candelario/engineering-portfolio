@@ -51,10 +51,12 @@ export default function Hero() {
           </a>
 
           <a
-            href="/resume.pdf"
-            className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] px-8 py-4 font-medium text-[color:var(--foreground)] transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--accent)] hover:bg-[color:var(--surface-hover)]"
+            href="/documents/david-candelario-resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] px-8 py-4 font-semibold text-[color:var(--foreground)] transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--accent)] hover:bg-[color:var(--surface-hover)]"
           >
-            Download Resume
+            View Resume
           </a>
         </div>
 
@@ -65,9 +67,7 @@ export default function Hero() {
                 {stat.value}
               </h3>
 
-              <p className="mt-2 text-[color:var(--muted)]">
-                {stat.label}
-              </p>
+              <p className="mt-2 text-[color:var(--muted)]">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -75,7 +75,7 @@ export default function Hero() {
         <div className="mt-20 flex justify-center pb-8">
           <a
             href="#experience"
-            aria-label="Scroll to engineering experience"
+            aria-label="Scroll to engineering projects"
             className="animate-bounce rounded-full p-3 text-[color:var(--muted)] transition hover:text-[color:var(--accent)]"
           >
             <svg
