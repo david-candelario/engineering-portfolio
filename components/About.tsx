@@ -4,7 +4,7 @@ const profileDetails = [
   {
     label: "Education",
     value: "B.S. Mechanical Engineering",
-    detail: "Cum Laude · UPRM · July 2026",
+    detail: "3.25 GPA · UPRM · July 2026",
   },
   {
     label: "Location",
@@ -42,7 +42,7 @@ export default function About() {
 
             <div className="mt-7 space-y-5 text-lg leading-8 text-[color:var(--muted)]">
               <p>
-                I graduated cum laude from the University of Puerto Rico at
+                I graduated from the University of Puerto Rico at
                 Mayagüez in July 2026 with a bachelor&apos;s degree in
                 Mechanical Engineering.
               </p>
